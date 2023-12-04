@@ -4,7 +4,12 @@ public class Singleton {
 
     // TODO 1 : fix singleton bad implementation
     public static Singleton getInstance() {
-        return new Singleton();
+        if(instance == null){
+        // if no instance exists, create one
+            instance = new Singleton();
+        }
+        //else return the instance
+        return instance;
     }
 
     private Bank bank;
